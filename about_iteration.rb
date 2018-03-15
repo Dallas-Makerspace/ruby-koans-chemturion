@@ -8,7 +8,7 @@ class AboutIteration < Neo::Koan
   # convert to the right format in the koans. We will use "as_name"
   # whenever comparing to lists of methods.
 
-  in_ruby_version("1.8") do
+    in_ruby_version("1.8") do
     def as_name(name)
       name.to_s
     end
@@ -24,7 +24,7 @@ class AboutIteration < Neo::Koan
   # -------------------------------------------------------------------
 
   def test_each_is_a_method_on_arrays
-    assert_equal __, [].methods.include?(as_name(:each))
+    assert_equal true, [].methods.include?(as_name(:each))
   end
 
   def test_iterating_with_each
