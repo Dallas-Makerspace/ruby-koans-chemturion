@@ -14,6 +14,8 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  raise TriangleError if (a <= 0) or (b <= 0) or (c <= 0)
+  raise TriangleError if (a + b <= c) or (a + c <= b) or (b + c <= a)
   if a == b and b == c
     :equilateral
   elsif (a == b and a != c) or (a == c and a != b) or (b == c and b != a)
